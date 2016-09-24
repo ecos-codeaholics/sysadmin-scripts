@@ -56,7 +56,7 @@ steps_seq = ';'.join(steps)
 
 print steps_seq
 
-exec_process( steps_seq )
+out,err = exec_process( steps_seq )
 logging.info('deployment done')
 
 # and finalise with these steps
@@ -67,5 +67,5 @@ final_steps.append(step6)
 
 steps_seq = ';'.join(final_steps)
 
-exec_process( steps_seq )
+out,err = exec_process( steps_seq )
 logging.info('verify:')
