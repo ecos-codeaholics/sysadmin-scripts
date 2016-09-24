@@ -4,7 +4,6 @@
 # ...
 import logging
 import subprocess
-import os
 
 logging.basicConfig(filename='/var/log/deploy/deploy.log',level=logging.DEBUG, format='%(asctime)s %(message)s')
 logging.info('*')
@@ -24,9 +23,7 @@ def start_supervisord():
 	out, err = exec_process( command )
 	return out, err
 
-home = os.environ['HOME']
-
-backend_script = home + '/sysadmin-scripts/' + 'deploy_backend.py'
+backend_script = '/home/ecos/sysadmin-scripts/' + 'deploy_backend.py'
 
 steps = []
 step0 = 'sudo -u ecos ' + backend_script
