@@ -4,6 +4,7 @@
 # ...
 import logging
 import os
+import subprocess
 
 logging.basicConfig(filename='deployback.log',level=logging.DEBUG, format='%(asctime)s %(message)s')
 logging.info('*')
@@ -43,7 +44,8 @@ steps.append (step4)
 
 steps_seq = ';'.join(steps)
 
-results = os.popen(steps_seq,'r').readlines()
+process = subprocess.Popen('/bin/bash', stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+out, err = process.communicate(steps_seq)
 logging.info('deployment done')
 
 final_steps = []
@@ -55,8 +57,3 @@ steps_seq = ';'.join(final_steps)
 
 results = os.popen(steps_seq,'r').readlines()
 logging.info(results[0][:-1] + ' ' + results[1][:-1])
-
-
-
-
-
