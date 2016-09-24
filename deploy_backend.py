@@ -13,11 +13,13 @@ path     = 'java-apps'
 src      = 'CA-Factory'
 repo     = 'https://github.com/ecos-codeaholics/factory-of-procedures-back.git'
 reponame = repo.split('/')[-1].split('.')[0]
-branch   = '-b development'
+branch   = '-b ' + target
 
 location = path + '/' + target + '/' + reponame + '/' + src
 
 steps = []
+
+step0 = 'su ecos'
 step1 = 'cd ' + location
 step2 = 'git pull ' + repo
 step3 = 'mvn clean'
