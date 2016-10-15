@@ -34,7 +34,10 @@ steps_seq = ';'.join(steps)
 stop_supervisord()
 
 #2. execute deployment
-exec_process( steps_seq )
+out,err = exec_process( steps_seq )
+
+print out
+print err
 
 #3. start supervisor
 start_supervisord()
