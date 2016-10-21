@@ -1,0 +1,5 @@
+{
+    "baseUrl": "http://172.24.99.149",
+    "port": "8084",
+    "debugging": "false"
+}

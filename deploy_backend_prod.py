@@ -7,7 +7,7 @@ import os
 import subprocess
 import sys
 
-logging.basicConfig(filename='deployback.log',level=logging.DEBUG, format='%(asctime)s %(message)s')
+logging.basicConfig(filename='/var/log/deploy/deployback.log',level=logging.DEBUG, format='%(asctime)s %(message)s')
 logging.info('*')
 
 def exec_process( cmd ):
