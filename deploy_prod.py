@@ -9,7 +9,7 @@ import sys
 logging.basicConfig(filename='/var/log/deploy/deploy.log',level=logging.DEBUG, format='%(asctime)s %(message)s')
 logging.info('*')
 
-under_supervision = ['back-factory-dev','front-factory-dev']
+under_supervision = ['back-factory-prod','front-factory-prod']
 
 def exec_process( cmd ):
 	process  = subprocess.Popen('/bin/bash', stdin=subprocess.PIPE, stdout=subprocess.PIPE)
@@ -26,8 +26,8 @@ def start_supervisord(program):
 	out, err = exec_process( command )
 	return out, err
 
-backend_script = '/home/ecos/sysadmin-scripts/' + 'deploy_backend.py'
-frontend_script = '/home/ecos/sysadmin-scripts/' + 'deploy_frontend.py'
+backend_script = '/home/ecos/sysadmin-scripts/' + 'deploy_backend_prod.py'
+frontend_script = '/home/ecos/sysadmin-scripts/' + 'deploy_frontend_prod.sh'
 
 steps = []
 step0 = 'sudo -u ecos ' + backend_script
