@@ -25,12 +25,12 @@ def start_supervisord(program):
 	out, err = exec_process( command )
 	return out, err
 
-backend_script = '/home/ecos/sysadmin-scripts/' + 'deploy_backend.py'
-frontend_script = '/home/ecos/sysadmin-scripts/' + 'deploy_frontend.py'
+backend_script  = '/home/"$USER"/GIT/sysadmin-scripts/' + 'deploy_backend.py'
+frontend_script = '/home/"$USER"/GIT/sysadmin-scripts/' + 'deploy_frontend.py'
 
 steps = []
-step0 = 'sudo -u ecos ' + backend_script
-step1 = 'sudo -u ecos ' + frontend_script
+step0 = backend_script
+step1 = frontend_script
 
 steps.append (step0)
 steps.append (step1)

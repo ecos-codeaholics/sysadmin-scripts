@@ -15,7 +15,7 @@ def exec_process( cmd ):
 	return out, err
 
 target   = 'development'
-path     = 'java-apps'
+path     = 'GIT/Backend'
 src      = 'CA-Factory'
 repo     = 'https://github.com/ecos-codeaholics/factory-of-procedures-back.git'
 reponame = repo.split('/')[-1].split('.')[0]
@@ -28,8 +28,8 @@ steps = []
 step0 = 'cd'
 step1 = 'cd ' + location
 step2 = 'git pull ' + repo
-step3 = '/usr/local/maven/bin/mvn clean'
-step4 = '/usr/local/maven/bin/mvn test'
+step3 = '/opt/develsw/maven/apache-maven-3.3.9/bin/mvn clean'
+step4 = '/opt/develsw/maven/apache-maven-3.3.9/bin/mvn test'
 step5 = 'git branch'
 step6 = 'git tag'
 
