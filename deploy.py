@@ -27,7 +27,7 @@ def start_supervisord(program):
 	return out, err
 
 backend_script = '/home/ecos/sysadmin-scripts/' + 'deploy_backend.py'
-frontend_script = '/home/ecos/sysadmin-scripts/' + 'deploy_frontend.py'
+frontend_script = '/home/ecos/sysadmin-scripts/' + 'deploy_frontend.sh'
 
 steps = []
 step0 = 'sudo -u ecos ' + backend_script
