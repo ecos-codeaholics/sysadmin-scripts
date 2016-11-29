@@ -8,7 +8,7 @@
 #tag=${args[1]}
 
 target="production"
-tag="v2.0"
+tag="v3.0"
 
 reponame="/factory-of-procedures-front"
 frontend_repo="https://github.com/ecos-codeaholics/factory-of-procedures-front.git"

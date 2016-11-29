@@ -15,7 +15,7 @@ def exec_process( cmd ):
 	out, err = process.communicate(cmd)
 	return out, err
 
-tag      = 'v1.1'
+tag      = 'v1.3'
 target   = 'production'
 path     = 'java-apps'
 src      = 'CA-Factory'
